@@ -1,5 +1,23 @@
 <?php
 include_once("stack-modules/DOM/index.php");
+include_once("connect.php");
+if (isset($_COOKIE["user_name"]) && isset($_COOKIE["user_id"])) {
+    display ('<script>window.location="/vigilante"</script>');
+}else {
+    if (isset($_POST["Login"])) {
+        $password = msn6($_POST["password"]);
+        $username = $_POST["user_name"];
+        $query = db_query($con,"select * from from user where username = '$username' and password='".htmlspecialchars($password)."'");
+        if (db_rows($query)>0) {
+            $row = db_fetch($qry);
+            setcookie("user_name",$row['username'],(time()+2592000));
+            setcookie("user_id",$row['id'],(time()+2592000));
+            display ('<script>window.location="/"</script>');
+        }else {
+            display('<script>alert("Failed to Login pls check yur password or username")</script>');
+        }
+    }
+}
 
 
 
@@ -14,13 +32,13 @@ include_once("stack-modules/DOM/index.php");
 <body>
 	<div class="container" id="container">
 		<div class="form-container log-in-container">
-			<form action="#" method="post">
+			<form method="post">
 				<h1>Login</h1>
 				<span>or use your account</span>
-				<input type="text" name="user_name" placeholder="alhso" />
-				<input type="password" name="password" placeholder="Password" />
-				<a href="#">Forgot your password?</a>
-                <input type="submit" value="login" style="background-color: #7E68F4; color:white; max-width:23em; border-radius:5px" placeholder="Log In">
+				<input type="text" name="user_name" placeholder="@alhso" required/>
+				<input type="password" name="password" placeholder="Password" required/>
+				<a href="forgotpassword">Forgot your password?</a>
+                <input type="submit" value="Login" name="Login" style="background-color: #7E68F4; color:white; max-width:23em; border-radius:5px" placeholder="Log In">
 			</form>
 		</div>
 		<div class="overlay-container">
