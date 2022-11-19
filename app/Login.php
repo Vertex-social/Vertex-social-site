@@ -26,7 +26,7 @@ include_once("stack-modules/DOM/index.php");
 		<div class="overlay-container">
 			<div class="overlay">
 				<div class="overlay-panel overlay-right">
-					<h1>Vigilante</h1>
+					<h1>Vertex</h1>
 					<p>This login form is created using stack framework.</p>
 				</div>
 			</div>
