@@ -5,6 +5,8 @@ route("/auth/login","app/Login.php");
 route("/auth/forgotpassword","app/Forgotpassword.php");
 route("/auth/register","app/Register.php");
 route("/auth/register-username","app/Reg_final.php");
+route("/friends","app/Friends.php");
+route("/notification","app/Notification.php");
 http_response_code(404);
 route("/404","404.php");
 
