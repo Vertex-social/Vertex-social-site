@@ -1,9 +1,9 @@
 <?php
 include_once("stack-modules/DOM/index.php");
-
-setcookie("current_pg_h","-fill",(time()+2592000));
+setcookie("current_pg_n","-fill",(time()+2592000));
 setcookie("current_pg_f"," ",(time()+2592000));
-setcookie("current_pg_n"," ",(time()+2592000));
+setcookie("current_pg_h"," ",(time()+2592000));
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

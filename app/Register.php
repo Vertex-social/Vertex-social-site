@@ -27,7 +27,7 @@ if (isset($_COOKIE["user_name"]) && isset($_COOKIE["user_id"])) {
 <!DOCTYPE html>
 <html>
 <head>    
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/auth.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Register</title>
 </head>
