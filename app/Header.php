@@ -21,15 +21,15 @@ if ($url_n=="localhost/vigilante/notification") {
 
 <header>
 
-<div class="logo">hi</div>
+<div class="logo">        <link rel = "icon" href = "Screenshot 2022-11-22 201342.png" 
+        type = "image/x-icon"></div>
     
     <div class="icons">
         
     <a href="/"><i class="bi bi-house-door<?php echo $_COOKIE["current_pg_h"];?>"></i></a>
     <a href="friends"><i class="bi bi-people<?php echo $_COOKIE["current_pg_f"];?>"></i></a>
     <a href="notification"><i class="bi bi-bell<?php echo $_COOKIE["current_pg_n"];?>"></i></a>
-        <link rel = "icon" href = "Screenshot 2022-11-22 201342.png" 
-        type = "image/x-icon">
+
     </div>
 
 <nav>
