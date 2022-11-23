@@ -14,6 +14,8 @@ setcookie("current_pg_n"," ",(time()+2592000));
     <title>Home</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel = "icon" href = "Screenshot 2022-11-22 201342.png" 
+        type = "image/x-icon">
 </head>
 <body>
 <?php include("Header.php");?>
